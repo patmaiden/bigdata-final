@@ -8,6 +8,9 @@ from gensim import corpora,models,similarities
 from collections import defaultdict
 import operator
 import sys
+from nltk.corpus import stopwords
+from nltk import word_tokenize
+import pickle
 
 def scrape(phrase, num_results):
     #replace spaces with plusses to convert them for the url
@@ -50,24 +53,33 @@ def scrape(phrase, num_results):
             print "error opening", link
             continue
         soup = BeautifulSoup(html)
-        texts = soup.findAll(text=True)
-        
+        #text = word_tokenize(text)
+        text = soup.findAll(text=True)
+        #print text 
         #get rid of empty lines
-        visible_texts = filter(lambda x: x != None and x != unicode('\n'), map(visible, texts))
+        visible_texts = filter(lambda x: x != None and x != unicode('\n'), map(visible, text))
        
         #convert unicode to ascii
-        visible_texts = map(lambda x: unicodedata.normalize('NFKD', x).encode('ascii','ignore')
-, visible_texts)
-        
+        visible_texts = map(lambda x: unicodedata.normalize('NFKD', x).encode('ascii', 'ignore'), visible_texts)
+
         # concatenate lines
         text = reduce(lambda x,y: x + ' ' +y.strip(), visible_texts, '')
         
         #remove everything but words and spaces
         text = ''.join(t for t in text.lower() if t.isalnum() or t == ' ')
 
+        #print text
         documents.append(text)
         
     return documents
+
+
+def save_dict(docs):
+    pickle.dump(docs, open("save.p","wb"))
+
+def load_dict():
+    return pickle.load(open("save.p", "rb"))
+
 
 
 """This isn't quite working yet - still trying to figure out gensim, since I think it is 
@@ -101,25 +113,38 @@ def sort_dict(x):
     return sorted(x.items(), key=operator.itemgetter(1))
 
 def count_words(docs):
+    stop = set(stopwords.words('english'))
+    stop = stop.union({'like','may'})
+    literal = set(['data','science','scientist','scientists', 'data science', 'data scientist', 'data scientists'])
     
     #count up the words
     freq = defaultdict(int)
+    check_stop = lambda word: word not in stop and len(word) > 2
     for doc in docs:
         doc = doc.split()
         for word in doc:
-            freq[word] += 1
-    
+            if check_stop(word) and  word not in literal:
+                freq[word] += 1.0
+            else:
+                doc.remove(word)
+        for word_ind in xrange(1,len(doc)):
+            phrase = doc[word_ind - 1] + ' ' + doc[word_ind]
+            if check_stop(doc[word_ind-1]) and check_stop(doc[word_ind]) and  phrase not in literal:
+                freq[phrase] += 1.5 
     #sort the list in descending order
     sorted_list = sort_dict(freq)
     sorted_list.reverse()
-    stopwords = set(['and', 'or', 'a', 'an', 'the', 'but', 'of'])
-    
     #print out words
+    thresh_ind = 0
+    rel_freq = []
+    max_freq = sorted_list[0][1]
     for element in sorted_list:
-        if element[0] not in stopwords and len(element[0]) > 2:
-            print element[0], element[1]
-    
-
+        if element[1] > 5:
+            rel_freq.append((element[0],element[1]/max_freq))
+        else:
+            break
+    print sorted_list[:15]
+    return rel_freq
 
 
 def visible(element):
@@ -130,6 +155,19 @@ def visible(element):
         return None
     return unicode(element)
 
+def make_cloud(docs):
+    flat_doc = count_words(docs)
+    from wordcloud import WordCloud
+    import wordcloud
+    import matplotlib.pyplot as plt
+    wc = WordCloud(ranks_only = True, font_path='/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf')
+    wc.fit_words(flat_doc)
+    #print wc 
+    
+    plt.imshow(wc)
+    plt.axis("off")
+    plt.show()
+    
 if __name__ == "__main__":
     argc = len(sys.argv)
     if argc < 3:
@@ -140,5 +178,13 @@ if __name__ == "__main__":
     print "Query:", query
     print "Number of results:", num_res
     docs = scrape(query,num_res)
-    count_words(docs)
+    save_dict(docs)
+    
+    docs = load_dict()
+    flat_doc = count_words(docs)
+    #print flat_doc
+    #flat_doc = 'ac a a a a a a b b'
+    #words = [el[0] for el in flat_doc]
+    #counts = [el[1] for el in flat_doc]
     #model = topic_model(docs)
+   
