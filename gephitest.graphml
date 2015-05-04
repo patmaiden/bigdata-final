@@ -1,0 +1,1091 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="double" for="edge" id="d5" />
+  <key attr.name="label" attr.type="string" for="node" id="d3" />
+  <key attr.name="g" attr.type="int" for="node" id="d4" />
+  <key attr.name="b" attr.type="int" for="node" id="d2" />
+  <key attr.name="r" attr.type="int" for="node" id="d1" />
+  <key attr.name="cluster" attr.type="int" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="0">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://en.wikipedia.org/wiki/Data_science</data>
+    </node>
+    <node id="1">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://datascience.berkeley.edu/about/what-is-data-science/</data>
+    </node>
+    <node id="2">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.quora.com/What-is-data-science</data>
+    </node>
+    <node id="3">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://datascience.nyu.edu/what-is-data-science/</data>
+    </node>
+    <node id="4">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.ibm.com/software/data/infosphere/data-scientist/</data>
+    </node>
+    <node id="5">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://radar.oreilly.com/2010/06/what-is-data-science.html</data>
+    </node>
+    <node id="6">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://www.datascientists.net/what-is-data-science</data>
+    </node>
+    <node id="7">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/</data>
+    </node>
+    <node id="8">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">https://datajobs.com/what-is-data-science</data>
+    </node>
+    <node id="9">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://searchcio.techtarget.com/definition/data-science</data>
+    </node>
+    <node id="10">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://searchbusinessanalytics.techtarget.com/definition/Data-scientist</data>
+    </node>
+    <node id="11">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">http://www.amazon.com/What-Data-Science-Mike-Loukides-ebook/dp/B007R8BHAK</data>
+    </node>
+    <node id="12">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">https://www.safaribooksonline.com/library/view/doing-data-science/9781449363871/ch01.html</data>
+    </node>
+    <node id="13">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">http://datascopeanalytics.com/what-we-think/2014/08/04/how-do-i-become-a-data-scientist-an-evaluation-of-3-alternatives</data>
+    </node>
+    <node id="14">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century/</data>
+    </node>
+    <node id="15">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">https://www.udacity.com/course/intro-to-data-science--ud459</data>
+    </node>
+    <node id="16">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">https://www.kaggle.com/wiki/WhatIsDataScience</data>
+    </node>
+    <node id="17">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.cloudera.com/content/cloudera/en/developers/home/developer-admin-resources/new-to-data-science.html</data>
+    </node>
+    <node id="18">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://blogs.wsj.com/cio/2014/05/02/why-do-we-need-data-science-when-weve-had-statistics-for-centuries/</data>
+    </node>
+    <node id="19">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://www.rochester.edu/data-science/</data>
+    </node>
+    <node id="20">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://dsi.virginia.edu/academics</data>
+    </node>
+    <node id="21">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">http://www.boozallen.com/insights/2013/11/data-science-field-guide</data>
+    </node>
+    <node id="22">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://mashable.com/2014/12/25/data-scientist/</data>
+    </node>
+    <node id="23">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">http://datascience.com/</data>
+    </node>
+    <node id="24">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.huffingtonpost.com/shelly-palmer/data-science-101---defini_b_5784508.html</data>
+    </node>
+    <node id="25">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.huffingtonpost.com/shelly-palmer/data-science-101---defini_b_5784508.html</data>
+    </node>
+    <node id="26">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">https://generalassemb.ly/education/what-is-data-science</data>
+    </node>
+    <node id="27">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://cs109.github.io/2014/</data>
+    </node>
+    <node id="28">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://www.extension.harvard.edu/courses/data-science</data>
+    </node>
+    <node id="29">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">https://www.linkedin.com/pulse/20131216094029-2143418-just-what-is-a-data-scientist-anyway</data>
+    </node>
+    <node id="30">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.information-management.com/blogs/what-is-data-science-again-10026075-1.html</data>
+    </node>
+    <node id="31">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">http://www.edureka.co/data-science</data>
+    </node>
+    <node id="32">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://blogs.adobe.com/digitalmarketing/analytics/data-science-service/</data>
+    </node>
+    <node id="33">
+      <data key="d0">1</data>
+      <data key="d1">0</data>
+      <data key="d2">255</data>
+      <data key="d4">0</data>
+      <data key="d3">http://insightdatascience.com/Insight_White_Paper.pdf</data>
+    </node>
+    <node id="34">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://en.wikibooks.org/wiki/Data_Science:_An_Introduction</data>
+    </node>
+    <node id="35">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://spectrum.ieee.org/podcast/at-work/tech-careers/is-data-science-your-next-career</data>
+    </node>
+    <node id="36">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://www.dataists.com/2010/09/a-taxonomy-of-data-science/</data>
+    </node>
+    <node id="37">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://datascience.inf.ed.ac.uk/what-is-data-science/</data>
+    </node>
+    <node id="38">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">https://github.com/okulbilisim/awesome-datascience</data>
+    </node>
+    <node id="39">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://www.datasciencecentral.com/profiles/blogs/data-science-without-statistics-is-possible-even-desirable</data>
+    </node>
+    <node id="40">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.cnbc.com/id/101618128</data>
+    </node>
+    <node id="41">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.slideshare.net/ryanorban/how-to-become-a-data-scientist</data>
+    </node>
+    <node id="42">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://informatics.nku.edu/departments/computer-science/programs/datascience.html</data>
+    </node>
+    <node id="43">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://news.dice.com/2014/03/05/data-science-is-dead/</data>
+    </node>
+    <node id="44">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://www.bgsu.edu/arts-and-sciences/mathematics-and-statistics/comast1.html</data>
+    </node>
+    <node id="45">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://insightdataengineering.com/blog/Data_Science_vs_Data_Engineering.html</data>
+    </node>
+    <node id="46">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://lifehacker.com/career-spotlight-what-i-do-as-a-data-scientist-1684793405</data>
+    </node>
+    <node id="47">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://www3.imperial.ac.uk/data-science</data>
+    </node>
+    <node id="48">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://analytics.uncc.edu/</data>
+    </node>
+    <node id="49">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://cacm.acm.org/magazines/2013/12/169933-data-science-and-prediction/fulltext</data>
+    </node>
+    <node id="50">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://www2.warwick.ac.uk/fac/sci/statistics/courses/datsci/</data>
+    </node>
+    <node id="51">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.techopedia.com/definition/28177/data-scientist</data>
+    </node>
+    <node id="52">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://datascienceretreat.com/</data>
+    </node>
+    <node id="53">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.trovedata.com/solutions/what-is-predictive-data-science/</data>
+    </node>
+    <node id="54">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.galvanize.com/2015/02/17/how-to-nail-a-data-science-interview/</data>
+    </node>
+    <node id="55">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://www.mastersindatascience.org/industry/</data>
+    </node>
+    <node id="56">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://www.moore.org/programs/science/data-driven-discovery</data>
+    </node>
+    <node id="57">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://insideanalysis.com/2013/08/a-data-science-rant/</data>
+    </node>
+    <node id="58">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">https://datahackathon2015.splashthat.com/</data>
+    </node>
+    <node id="59">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://readwrite.com/2014/07/21/data-scientist-income-skills-jobs</data>
+    </node>
+    <node id="60">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://www.emc.com/collateral/about/news/emc-data-science-study-wp.pdf</data>
+    </node>
+    <node id="61">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.meetup.com/DataScience-SG-Singapore/</data>
+    </node>
+    <node id="62">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://www.theatlantic.com/technology/archive/2014/07/data-science-what-the-facebook-controversy-is-really-about/373770/</data>
+    </node>
+    <node id="63">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://datascience.la/</data>
+    </node>
+    <node id="64">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://www.simafore.com/blog/what-is-data-science-no-really</data>
+    </node>
+    <node id="65">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">https://www.cia.gov/careers/opportunities/science-technology/data-scientist.html</data>
+    </node>
+    <node id="66">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://science.iit.edu/programs/graduate/master-data-science</data>
+    </node>
+    <node id="67">
+      <data key="d0">1</data>
+      <data key="d1">0</data>
+      <data key="d2">255</data>
+      <data key="d4">0</data>
+      <data key="d3">https://ischool.syr.edu/media/documents/2012/3/DataScienceBook1_1.pdf</data>
+    </node>
+    <node id="68">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">http://www.i-programmer.info/news/150-training-a-education/8451-april-moocs.html</data>
+    </node>
+    <node id="69">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">http://datasciencetoolbox.org/</data>
+    </node>
+    <node id="70">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://berkeleysciencereview.com/article/first-rule-data-science/</data>
+    </node>
+    <node id="71">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://datascience.smu.edu/admissions/overview/</data>
+    </node>
+    <node id="72">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://datascience.smu.edu/admissions/overview/</data>
+    </node>
+    <node id="73">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://blog.framed.io/what-is-data-science-data-pyramid/</data>
+    </node>
+    <node id="74">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://www.datascienceweekly.org/data-science-resources/data-science-newsletter-most-read-articles</data>
+    </node>
+    <node id="75">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://ds.cs.umass.edu/</data>
+    </node>
+    <node id="76">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">https://exploredatascience.com/</data>
+    </node>
+    <node id="77">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram</data>
+    </node>
+    <node id="78">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">https://www.stat.wisc.edu/ms-degree-data-science-option-ms-ds</data>
+    </node>
+    <node id="79">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://www.wpi.edu/academics/datascience/degree-requirements.html</data>
+    </node>
+    <node id="80">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.r-bloggers.com/software-engineers-guide-to-getting-started-with-data-science/</data>
+    </node>
+    <node id="81">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">https://www.usfca.edu/artsci/bsds/</data>
+    </node>
+    <node id="82">
+      <data key="d0">4</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">164</data>
+      <data key="d3">http://hortonworks.com/blog/hortonworks-hadoop-data-science/</data>
+    </node>
+    <node id="83">
+      <data key="d0">3</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">254</data>
+      <data key="d3">http://datascience.stackexchange.com/</data>
+    </node>
+    <node id="84">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://2u.com/about/partners/berkeley/</data>
+    </node>
+    <node id="85">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://midas.umich.edu/</data>
+    </node>
+    <node id="86">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">https://www.whitehouse.gov/blog/2015/02/19/memo-us-chief-data-scientist-dr-dj-patil-unleashing-power-data-serve-american-people</data>
+    </node>
+    <node id="87">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">https://www.class-central.com/mooc/1480/udacity-intro-to-data-science</data>
+    </node>
+    <node id="88">
+      <data key="d0">5</data>
+      <data key="d1">128</data>
+      <data key="d2">127</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.dataplusscience.com/DataScientist.html</data>
+    </node>
+    <node id="89">
+      <data key="d0">0</data>
+      <data key="d1">255</data>
+      <data key="d2">0</data>
+      <data key="d4">0</data>
+      <data key="d3">http://www.epjdatascience.com/</data>
+    </node>
+    <node id="90">
+      <data key="d0">2</data>
+      <data key="d1">0</data>
+      <data key="d2">0</data>
+      <data key="d4">128</data>
+      <data key="d3">http://www.barcelonagse.eu/master-data-science.html</data>
+    </node>
+    <edge source="0" target="88">
+      <data key="d5">2.8531974399</data>
+    </edge>
+    <edge source="0" target="38">
+      <data key="d5">2.34700030178</data>
+    </edge>
+    <edge source="1" target="50">
+      <data key="d5">2.20676218528</data>
+    </edge>
+    <edge source="2" target="8">
+      <data key="d5">1.67946731421</data>
+    </edge>
+    <edge source="2" target="39">
+      <data key="d5">2.70152796179</data>
+    </edge>
+    <edge source="3" target="65">
+      <data key="d5">2.26419925336</data>
+    </edge>
+    <edge source="3" target="50">
+      <data key="d5">2.65102647168</data>
+    </edge>
+    <edge source="3" target="70">
+      <data key="d5">1.7603045975</data>
+    </edge>
+    <edge source="3" target="22">
+      <data key="d5">2.80498308653</data>
+    </edge>
+    <edge source="3" target="89">
+      <data key="d5">2.82239381001</data>
+    </edge>
+    <edge source="4" target="16">
+      <data key="d5">1.5151381847</data>
+    </edge>
+    <edge source="5" target="57">
+      <data key="d5">1.34643527117</data>
+    </edge>
+    <edge source="5" target="43">
+      <data key="d5">2.97147106159</data>
+    </edge>
+    <edge source="5" target="29">
+      <data key="d5">2.48556809103</data>
+    </edge>
+    <edge source="6" target="64">
+      <data key="d5">1.49779194183</data>
+    </edge>
+    <edge source="6" target="73">
+      <data key="d5">1.55119842714</data>
+    </edge>
+    <edge source="6" target="43">
+      <data key="d5">2.9815629148</data>
+    </edge>
+    <edge source="6" target="29">
+      <data key="d5">1.4746919515</data>
+    </edge>
+    <edge source="7" target="59">
+      <data key="d5">0.0</data>
+    </edge>
+    <edge source="8" target="39">
+      <data key="d5">2.41401476711</data>
+    </edge>
+    <edge source="9" target="51">
+      <data key="d5">2.13817140551</data>
+    </edge>
+    <edge source="10" target="73">
+      <data key="d5">2.94949938815</data>
+    </edge>
+    <edge source="10" target="51">
+      <data key="d5">2.17298724358</data>
+    </edge>
+    <edge source="12" target="88">
+      <data key="d5">1.26455778337</data>
+    </edge>
+    <edge source="12" target="35">
+      <data key="d5">2.84077786239</data>
+    </edge>
+    <edge source="12" target="36">
+      <data key="d5">1.37830974315</data>
+    </edge>
+    <edge source="12" target="46">
+      <data key="d5">2.97019814746</data>
+    </edge>
+    <edge source="13" target="58">
+      <data key="d5">1.71928916775</data>
+    </edge>
+    <edge source="13" target="68">
+      <data key="d5">2.6671251392</data>
+    </edge>
+    <edge source="14" target="82">
+      <data key="d5">2.16373271278</data>
+    </edge>
+    <edge source="14" target="46">
+      <data key="d5">2.23562668593</data>
+    </edge>
+    <edge source="15" target="87">
+      <data key="d5">2.64764939619</data>
+    </edge>
+    <edge source="16" target="57">
+      <data key="d5">2.88392042265</data>
+    </edge>
+    <edge source="17" target="38">
+      <data key="d5">2.3274555003</data>
+    </edge>
+    <edge source="17" target="45">
+      <data key="d5">1.61274995236</data>
+    </edge>
+    <edge source="17" target="18">
+      <data key="d5">2.95721791149</data>
+    </edge>
+    <edge source="17" target="83">
+      <data key="d5">2.97931122567</data>
+    </edge>
+    <edge source="17" target="52">
+      <data key="d5">2.71287949489</data>
+    </edge>
+    <edge source="17" target="54">
+      <data key="d5">2.86127674837</data>
+    </edge>
+    <edge source="17" target="26">
+      <data key="d5">2.96134414158</data>
+    </edge>
+    <edge source="18" target="83">
+      <data key="d5">1.8656396619</data>
+    </edge>
+    <edge source="18" target="68">
+      <data key="d5">2.51563624653</data>
+    </edge>
+    <edge source="18" target="40">
+      <data key="d5">2.84716573656</data>
+    </edge>
+    <edge source="18" target="73">
+      <data key="d5">2.82670117638</data>
+    </edge>
+    <edge source="18" target="46">
+      <data key="d5">2.32045915915</data>
+    </edge>
+    <edge source="18" target="82">
+      <data key="d5">1.03824256568</data>
+    </edge>
+    <edge source="18" target="51">
+      <data key="d5">2.90679317616</data>
+    </edge>
+    <edge source="18" target="52">
+      <data key="d5">1.59607507819</data>
+    </edge>
+    <edge source="18" target="54">
+      <data key="d5">2.32352762856</data>
+    </edge>
+    <edge source="18" target="26">
+      <data key="d5">2.36023886204</data>
+    </edge>
+    <edge source="18" target="58">
+      <data key="d5">2.46106843374</data>
+    </edge>
+    <edge source="19" target="66">
+      <data key="d5">2.48505597558</data>
+    </edge>
+    <edge source="19" target="75">
+      <data key="d5">1.77533273959</data>
+    </edge>
+    <edge source="19" target="78">
+      <data key="d5">2.72017746724</data>
+    </edge>
+    <edge source="19" target="81">
+      <data key="d5">2.12441625962</data>
+    </edge>
+    <edge source="19" target="84">
+      <data key="d5">2.13215448581</data>
+    </edge>
+    <edge source="19" target="90">
+      <data key="d5">1.39593751326</data>
+    </edge>
+    <edge source="21" target="40">
+      <data key="d5">2.78296061553</data>
+    </edge>
+    <edge source="21" target="86">
+      <data key="d5">2.59778476634</data>
+    </edge>
+    <edge source="22" target="57">
+      <data key="d5">2.5891957951</data>
+    </edge>
+    <edge source="22" target="89">
+      <data key="d5">2.41928936558</data>
+    </edge>
+    <edge source="24" target="25">
+      <data key="d5">0.0</data>
+    </edge>
+    <edge source="26" target="68">
+      <data key="d5">2.21704865152</data>
+    </edge>
+    <edge source="26" target="76">
+      <data key="d5">2.86379737368</data>
+    </edge>
+    <edge source="26" target="82">
+      <data key="d5">2.94643794926</data>
+    </edge>
+    <edge source="26" target="83">
+      <data key="d5">1.79314930733</data>
+    </edge>
+    <edge source="26" target="54">
+      <data key="d5">2.89536649572</data>
+    </edge>
+    <edge source="26" target="58">
+      <data key="d5">2.82356306199</data>
+    </edge>
+    <edge source="28" target="85">
+      <data key="d5">2.99954849776</data>
+    </edge>
+    <edge source="29" target="64">
+      <data key="d5">1.47549319886</data>
+    </edge>
+    <edge source="29" target="73">
+      <data key="d5">2.79861552475</data>
+    </edge>
+    <edge source="29" target="43">
+      <data key="d5">1.75898775963</data>
+    </edge>
+    <edge source="29" target="46">
+      <data key="d5">2.1975839272</data>
+    </edge>
+    <edge source="29" target="82">
+      <data key="d5">2.8807102047</data>
+    </edge>
+    <edge source="29" target="54">
+      <data key="d5">2.98273189904</data>
+    </edge>
+    <edge source="36" target="88">
+      <data key="d5">2.07156005935</data>
+    </edge>
+    <edge source="37" target="55">
+      <data key="d5">2.90402933779</data>
+    </edge>
+    <edge source="38" target="88">
+      <data key="d5">2.9014995714</data>
+    </edge>
+    <edge source="39" target="80">
+      <data key="d5">2.65422727872</data>
+    </edge>
+    <edge source="39" target="74">
+      <data key="d5">1.00434731857</data>
+    </edge>
+    <edge source="40" target="86">
+      <data key="d5">1.52657803953</data>
+    </edge>
+    <edge source="41" target="80">
+      <data key="d5">2.09685630514</data>
+    </edge>
+    <edge source="42" target="65">
+      <data key="d5">1.98995757696</data>
+    </edge>
+    <edge source="42" target="85">
+      <data key="d5">2.39826372311</data>
+    </edge>
+    <edge source="43" target="64">
+      <data key="d5">2.21663888085</data>
+    </edge>
+    <edge source="43" target="73">
+      <data key="d5">2.9282929439</data>
+    </edge>
+    <edge source="43" target="46">
+      <data key="d5">1.60693449611</data>
+    </edge>
+    <edge source="43" target="82">
+      <data key="d5">2.49422129681</data>
+    </edge>
+    <edge source="45" target="52">
+      <data key="d5">2.00226621851</data>
+    </edge>
+    <edge source="45" target="54">
+      <data key="d5">2.00168070478</data>
+    </edge>
+    <edge source="45" target="87">
+      <data key="d5">2.55260941963</data>
+    </edge>
+    <edge source="46" target="64">
+      <data key="d5">2.50703494937</data>
+    </edge>
+    <edge source="46" target="68">
+      <data key="d5">2.92680190644</data>
+    </edge>
+    <edge source="46" target="82">
+      <data key="d5">1.35139841338</data>
+    </edge>
+    <edge source="46" target="52">
+      <data key="d5">2.17512749774</data>
+    </edge>
+    <edge source="46" target="54">
+      <data key="d5">2.50200301169</data>
+    </edge>
+    <edge source="46" target="58">
+      <data key="d5">2.60426012709</data>
+    </edge>
+    <edge source="47" target="81">
+      <data key="d5">2.67512501635</data>
+    </edge>
+    <edge source="47" target="55">
+      <data key="d5">2.90265112732</data>
+    </edge>
+    <edge source="48" target="81">
+      <data key="d5">2.10926437391</data>
+    </edge>
+    <edge source="48" target="66">
+      <data key="d5">2.94521291593</data>
+    </edge>
+    <edge source="48" target="75">
+      <data key="d5">2.82477453165</data>
+    </edge>
+    <edge source="49" target="89">
+      <data key="d5">2.01086001714</data>
+    </edge>
+    <edge source="52" target="64">
+      <data key="d5">2.68139352645</data>
+    </edge>
+    <edge source="52" target="68">
+      <data key="d5">1.77129811445</data>
+    </edge>
+    <edge source="52" target="76">
+      <data key="d5">2.40807328728</data>
+    </edge>
+    <edge source="52" target="83">
+      <data key="d5">2.21893545279</data>
+    </edge>
+    <edge source="52" target="82">
+      <data key="d5">2.23317685558</data>
+    </edge>
+    <edge source="52" target="54">
+      <data key="d5">1.02942527909</data>
+    </edge>
+    <edge source="52" target="87">
+      <data key="d5">2.26596882993</data>
+    </edge>
+    <edge source="52" target="58">
+      <data key="d5">2.06970191527</data>
+    </edge>
+    <edge source="53" target="55">
+      <data key="d5">2.94529923592</data>
+    </edge>
+    <edge source="54" target="64">
+      <data key="d5">2.88093168841</data>
+    </edge>
+    <edge source="54" target="83">
+      <data key="d5">1.90349236858</data>
+    </edge>
+    <edge source="54" target="68">
+      <data key="d5">2.52894792456</data>
+    </edge>
+    <edge source="54" target="76">
+      <data key="d5">2.26165969395</data>
+    </edge>
+    <edge source="54" target="58">
+      <data key="d5">2.69006390805</data>
+    </edge>
+    <edge source="54" target="82">
+      <data key="d5">2.56005236953</data>
+    </edge>
+    <edge source="55" target="90">
+      <data key="d5">2.48841836321</data>
+    </edge>
+    <edge source="58" target="68">
+      <data key="d5">1.08572098493</data>
+    </edge>
+    <edge source="58" target="76">
+      <data key="d5">2.09408966244</data>
+    </edge>
+    <edge source="58" target="83">
+      <data key="d5">2.01482554601</data>
+    </edge>
+    <edge source="58" target="82">
+      <data key="d5">2.6406973689</data>
+    </edge>
+    <edge source="64" target="73">
+      <data key="d5">2.24566003276</data>
+    </edge>
+    <edge source="64" target="82">
+      <data key="d5">2.92066756729</data>
+    </edge>
+    <edge source="65" target="84">
+      <data key="d5">2.54933220396</data>
+    </edge>
+    <edge source="65" target="85">
+      <data key="d5">2.99584236312</data>
+    </edge>
+    <edge source="65" target="70">
+      <data key="d5">2.87303733702</data>
+    </edge>
+    <edge source="66" target="81">
+      <data key="d5">2.02632131276</data>
+    </edge>
+    <edge source="66" target="75">
+      <data key="d5">2.81202408337</data>
+    </edge>
+    <edge source="66" target="90">
+      <data key="d5">2.97165088644</data>
+    </edge>
+    <edge source="68" target="82">
+      <data key="d5">2.9238413457</data>
+    </edge>
+    <edge source="68" target="76">
+      <data key="d5">1.87777092414</data>
+    </edge>
+    <edge source="68" target="83">
+      <data key="d5">2.15371374714</data>
+    </edge>
+    <edge source="73" target="82">
+      <data key="d5">2.38781770529</data>
+    </edge>
+    <edge source="75" target="81">
+      <data key="d5">2.36710942631</data>
+    </edge>
+    <edge source="75" target="86">
+      <data key="d5">2.9211082033</data>
+    </edge>
+    <edge source="75" target="90">
+      <data key="d5">2.39116832945</data>
+    </edge>
+    <edge source="76" target="83">
+      <data key="d5">1.96105049223</data>
+    </edge>
+    <edge source="76" target="87">
+      <data key="d5">2.88218656025</data>
+    </edge>
+    <edge source="78" target="90">
+      <data key="d5">2.82763614709</data>
+    </edge>
+    <edge source="78" target="84">
+      <data key="d5">2.48081084574</data>
+    </edge>
+    <edge source="78" target="79">
+      <data key="d5">2.41925287816</data>
+    </edge>
+    <edge source="79" target="90">
+      <data key="d5">2.50837941925</data>
+    </edge>
+    <edge source="79" target="84">
+      <data key="d5">2.57582448192</data>
+    </edge>
+    <edge source="81" target="90">
+      <data key="d5">2.34517139938</data>
+    </edge>
+    <edge source="82" target="83">
+      <data key="d5">2.51724676545</data>
+    </edge>
+    <edge source="84" target="90">
+      <data key="d5">1.60916190084</data>
+    </edge>
+  </graph>
+</graphml>
