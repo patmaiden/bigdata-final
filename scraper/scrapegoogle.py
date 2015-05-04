@@ -18,7 +18,8 @@ from sklearn.cluster import KMeans
 from collections import defaultdict
 import matplotlib.pyplot as plt
 import math
-
+import networkx
+import colour as cl
 def scrape(phrase, num_results):
     #replace spaces with plusses to convert them for the url
     phrase = phrase.replace(' ', '+')
@@ -93,9 +94,9 @@ def load_dict(fn):
     return pickle.load(open(fn, "rb"))
 
 def count_words(docs):
-    stop = set(stopwords.words('english'))
-    stop = stop.union({'like','may','many','one'})
-    literal = set(['data','science','scientist','scientists', 'data science', 'data scientist', 'data scientists'])
+    #stop = set(stopwords.words('english'))
+    stop = []  #stop.union({'like','may','many','one'})
+    literal = []#set(['data','science','scientist','scientists', 'data science', 'data scientist', 'data scientists'])
     
     #count up the words
     freq = defaultdict(int)
@@ -115,7 +116,7 @@ def count_words(docs):
     sorted_list = sort_dict(freq)
     sorted_list.reverse()
     #print out words
-   # thresh_ind = 0
+    thresh_ind = 0
     #rel_freq = []
     #max_freq = sorted_list[0][1]
     #for element in sorted_list:
@@ -125,8 +126,6 @@ def count_words(docs):
             #break
     print sorted_list[-15:]
     return sorted_list 
-
-
 
 def sort_dict(dictionary):
     item_list = dictionary.items()
@@ -219,16 +218,17 @@ def print_topics(model, names):
         print("Topic {}: {}".format(i," | ".join(topic_words)))
 
 
-
 def assign_cluster(dist, links, n_clusters=6):
     clusters = [[] for i  in xrange(n_clusters)]
+    rev_lookup = dict()
     for i in xrange(len(links)):
         cluster = max( (v,j) for j,v in enumerate(dist[i]) ) [1]
         clusters[cluster].append(links[i])
+        rev_lookup[links[i]] = cluster
     percents = []
     for i in xrange(n_clusters):
         percents.append(float(len(clusters[i]))/float(len(links)))
-    return clusters, percents
+    return clusters, percents, rev_lookup
 
 def plot_bargraph(percents,width=.8):
     topics = xrange(len(percents))
@@ -237,22 +237,42 @@ def plot_bargraph(percents,width=.8):
     plt.xlabel('Topic number')
     plt.show()
 
-def find_matches(dist, links, thresh=.2):
+def find_matches(dist, links, thresh=3):
     edges = []
     for i in xrange(len(links)):
         for j in xrange(i+1, len(links)):
             link1 = links[i]
             link2 = links[j]
-            if determine_edge(dist[i],dist[j],thresh):
-                edges.append((link1,link2))
+            weight = determine_edge(dist[i],dist[j])
+            if weight < thresh:
+                edges.append((i,j,{'weight':weight}))
     return edges
 
-def determine_edge(dist1,dist2,thresh):
+def determine_edge(dist1,dist2):
+    import math 
     diff = 0
     for x,y in zip(dist1,dist2):
-        diff += abs(x-y)
-    return diff < thresh
+        diff += abs(math.log(x)-math.log(y))
+    return diff 
 
+
+def build_graph(dist, links, lookup):
+    import networkx as nx
+    import colour as cl
+    color_map = {0:'red',1:'blue', 2:'green', 3:'yellow',4:'orange', 5:'purple'}
+    G = nx.Graph()
+    for i, l in enumerate(links):
+        color = cl.Color(color_map[lookup[l]])
+        G.add_node(i,label=l, cluster=lookup[l], r =int(color.red*255.0), b=int(color.blue*255.0),g=int(color.green*255.0))
+    edges = find_matches(dist, links)
+    G.add_edges_from(edges)
+    return G
+
+def show_graph(G):
+    import networkx as nx
+    color_map = {0:'red',1:'blue', 2:'green', 3:'yellow',4:'orange', 5:'purple'}
+    nx.draw(G,node_color=[color_map[G.node[node]['cluster']] for node in G])
+    plt.show()
 
 if  __name__ == "__main__":
 
@@ -272,10 +292,7 @@ if  __name__ == "__main__":
     docs, links = scrape(query,num_res)
     print "saving dictionary"
     query = query.replace(' ','_')
-    fn = query + '_' + str(num_res) + '.p'
-    import os
-    
-    
+    fn = query + '_' + str(num_res) + '.p'    
     print fn
     save_dict(docs,links,query + '_' + str(num_res))
     print "reloading dict"
@@ -288,9 +305,8 @@ if  __name__ == "__main__":
     print "topic modeling"
     model,dist = topic_model(counts, names)
     print len(links), links
-    clusters, percents = assign_cluster(dist, links)
+    clusters, percents, lookup = assign_cluster(dist, links)
     plot_bargraph(percents)
-    #flat_doc = count_words(docs)
     
 
  
