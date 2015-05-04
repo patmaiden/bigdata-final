@@ -94,7 +94,7 @@ def load_dict(fn):
 
 def count_words(docs):
     stop = set(stopwords.words('english'))
-    stop = stop.union({'like','may'})
+    stop = stop.union({'like','may','many','one'})
     literal = set(['data','science','scientist','scientists', 'data science', 'data scientist', 'data scientists'])
     
     #count up the words
@@ -115,17 +115,25 @@ def count_words(docs):
     sorted_list = sort_dict(freq)
     sorted_list.reverse()
     #print out words
-    thresh_ind = 0
-    rel_freq = []
-    max_freq = sorted_list[0][1]
-    for element in sorted_list:
-        if element[1] > 5:
-            rel_freq.append((element[0],element[1]/max_freq))
-        else:
-            break
-    print sorted_list[:15]
-    return rel_freq
+   # thresh_ind = 0
+    #rel_freq = []
+    #max_freq = sorted_list[0][1]
+    #for element in sorted_list:
+        #if element[1] > 5:
+            #rel_freq.append((element[0],element[1]/max_freq))
+        #else:
+            #break
+    print sorted_list[-15:]
+    return sorted_list 
 
+
+
+def sort_dict(dictionary):
+    item_list = dictionary.items()
+    #item_list.sort(key=lambda x: x[1])
+    #item_list.reverse()
+    import operator
+    return sorted(item_list, key=operator.itemgetter(1))
 
 def visible(element):
 
