@@ -54,6 +54,7 @@ def scrape(phrase, num_results):
     #make the HTML requests and store the results
     documents = []
     to_remove = []
+    titles = []
     for link in links:
         request = urllib2.Request(link, headers={'User-Agent': 'Mozilla/5.0'})
         try:
@@ -63,6 +64,8 @@ def scrape(phrase, num_results):
             to_remove.append(link)
             continue
         soup = BeautifulSoup(html)
+        title = soup.html.head.title.string
+        title.append(title)
         #text = word_tokenize(text)
         text = soup.findAll(text=True)
         #print text 
@@ -289,7 +292,7 @@ if  __name__ == "__main__":
     print "Number of results:", num_res
     print "starting to scrape"
     literal = set(query.split())
-    docs, links = scrape(query,num_res)
+    docs, links, titles = scrape(query,num_res)
     print "saving dictionary"
     query = query.replace(' ','_')
     fn = query + '_' + str(num_res) + '.p'    
