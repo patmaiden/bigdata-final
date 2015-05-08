@@ -54,7 +54,7 @@ def scrape(phrase, num_results):
     #make the HTML requests and store the results
     documents = []
     to_remove = []
-    titles = []
+    #titles = []
     for link in links:
         request = urllib2.Request(link, headers={'User-Agent': 'Mozilla/5.0'})
         try:
@@ -64,8 +64,16 @@ def scrape(phrase, num_results):
             to_remove.append(link)
             continue
         soup = BeautifulSoup(html)
-        title = soup.html.head.title.string
-        title.append(title)
+        #try:
+        #    title_tag = soup.title
+        #    print title_tag.string
+        #    if title_tag.string == None:
+        #        raise AttributeError('Title is None')
+        #    titles.append(unicodedata.normalize('NFKD',title_tag.string).encode('ascii','ignore'))
+        #except AttributeError:
+        #    to_remove.append(link)
+        #    continue
+        
         #text = word_tokenize(text)
         text = soup.findAll(text=True)
         #print text 
@@ -85,7 +93,7 @@ def scrape(phrase, num_results):
         documents.append(text)
     for x in to_remove:
         links.remove(x)
-    return documents, links
+    return documents, links #, titles
 
 
 def save_dict(docs, links,query_nr):
@@ -97,9 +105,9 @@ def load_dict(fn):
     return pickle.load(open(fn, "rb"))
 
 def count_words(docs):
-    #stop = set(stopwords.words('english'))
-    stop = []  #stop.union({'like','may','many','one'})
-    literal = []#set(['data','science','scientist','scientists', 'data science', 'data scientist', 'data scientists'])
+    stop = set(stopwords.words('english'))
+    stop = stop.union({'like','may','many','one','blog'})
+    literal = set(['data', 'big', 'big data']) #set(['data','science','scientist','scientists', 'data science', 'data scientist', 'data scientists'])
     
     #count up the words
     freq = defaultdict(int)
@@ -254,8 +262,12 @@ def find_matches(dist, links, thresh=3):
 def determine_edge(dist1,dist2):
     import math 
     diff = 0
+ 
+    #sigmoid = lambda x: 1/(1 + math.exp(-x)
+   
     for x,y in zip(dist1,dist2):
         diff += abs(math.log(x)-math.log(y))
+        #abs(math.log(x)-math.log(y))
     return diff 
 
 
