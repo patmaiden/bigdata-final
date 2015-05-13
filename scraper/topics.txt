@@ -1,8 +1,0 @@
-Topic 0: data | big | business | analytics | big data | management | email | technology | service | view | information | news | insights | contact | intelligence | cloud | security | help | data analytics
-Topic 1: data | scientist | scientists | data scientists | data scientist | people | one | job | work | know | new | good | make | even | many | way | also | see | post
-Topic 2: type | length | link | filter | text | resources | parent | page | contents | image | true | 500 | pages | kids | group | form | 100 | 300 | action
-Topic 3: data | science | data science | statistics | analysis | statistical | computer | mining | knowledge | tools | 2012 | information | many | field | science data | data scientist | scientists | process | term
-Topic 4: science | research | new | data science | 2015 | social | marketing | industry | world | 2014 | market | since | years | scientific | researchers | blog | comments | people | applied
-Topic 5: data | learning | scientist | skills | machine | machine learning | data scientist | using | time | course | problems | one | learn | programming | techniques | questions | team | analysis | project
-Topic 6: students | studies | science | university | programs | program | degree | sciences | school | courses | graduate | certificate | data science | application | college | information | education | masters | mathematics
-Topic 7: data | data science | science | ago | views | share | comments | free | book | want | following | start | sign | need | step | months | help | days | first
