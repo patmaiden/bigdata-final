@@ -55,7 +55,7 @@ def run_loop():
                 func.plot_bargraph(percents)
             
             elif entry == 'g':
-                print "\n topic modeling ang building graph with 6 topics\n"
+                print "\n Topic modeling and building network of results\n"
                 print "\nHow many topics would you like? (Limit 10 for visualiztion):",
                 num_top = int(raw_input().strip())
                
@@ -92,6 +92,7 @@ def run_loop():
 def print_help():
     string = "\nHere are the options\n"
     string += "f - word frequency\n"
+    string += "w - wordcloud\n"
     string += "t - topic model with bar graph\n"
     string += "g - topic model with network\n"
     string += "r - reset search query\n"

@@ -21,7 +21,8 @@ import math
 import networkx
 import colour as cl
 
-
+"""Scrapes google for the search query
+and returns clean HTML of the pages"""
 def scrape(phrase, num_results):
     #replace spaces with plusses to convert them for the url
     phrase = phrase.replace(' ', '+')
@@ -82,20 +83,31 @@ def scrape(phrase, num_results):
 
         
         documents.append(text)
+    
+    #pull out bad links
     for x in to_remove:
         links.remove(x)
 
     return documents, links
+"""Helper for scrape that returns text only if it is visible"""
+def visible(element):
+    if element.parent.name in ['style', 'script', '[document]', 'head', 'title']:
+        return None
+    elif isinstance(element,bs4.element.Comment):
+        return None
+    return unicode(element)
 
 
+"""Saves the input dictionary for later use"""
 def save_dict(docs, links,query_nr):
     pickle.dump(docs, open(query_nr + '.p',"wb"))
     pickle.dump(links, open(query_nr + '_urls.p','wb'))
 
-
+"""loads a dictionary at the given filename"""
 def load_dict(fn):
     return pickle.load(open(fn, "rb"))
 
+"""Generates a list of (word,frequency pairs)"""
 def count_words(docs):
     stop = set(stopwords.words('english'))
     stop = stop.union({'like','may','many','one','blog'})
@@ -122,18 +134,13 @@ def count_words(docs):
     
     return sorted_list 
 
+"""Helper function for count_words that sorts the input dictionary"""
 def sort_dict(dictionary):
     item_list = dictionary.items()
     import operator
     return sorted(item_list, key=operator.itemgetter(1))
 
-def visible(element):
-    if element.parent.name in ['style', 'script', '[document]', 'head', 'title']:
-        return None
-    elif isinstance(element,bs4.element.Comment):
-        return None
-    return unicode(element)
-
+"""Generates wordcloud from documents"""
 def make_cloud(docs):
     flat_doc = count_words(docs)
     from wordcloud import WordCloud
@@ -146,12 +153,17 @@ def make_cloud(docs):
     plt.imshow(wc)
     plt.axis("off")
     plt.show()
-   
+
+    
+"""cleans the string of literal and nonenglish words and tokenizes it"""   
 def clean_vec(docs, literal):
     d = enchant.Dict("en_US")
     stop = set(stopwords.words('english'))
     stop = stop.union({'like','may'})
+
+    #function to return whether to include word or not
     check_stop = lambda doc: word not in literal and word not in stop and len(word) > 2 and d.check(word)
+    
     to_ret = []
     for doc in docs:
         tmp = []
@@ -162,25 +174,28 @@ def clean_vec(docs, literal):
         to_ret.append(tmp)
     return to_ret
 
+"""joins a list of list of strings into a list of strings"""
 def flatten_list(docs):
     out = []
     for doc in docs:
         out.append(' '.join(word for word in doc))
     return out
 
+"""generates the wordcount vectorizer for topic modeling"""
 def make_vectorizer(docs):
     vec = CountVectorizer(min_df = 5, ngram_range=(1,2))
     counts = vec.fit_transform(docs)
     names = vec.get_feature_names()
     return counts, names
 
-
+"""generates the tfidf vectorizer for k-means"""
 def make_tfidf_vec(docs):
     vec = TfidfVectorizer(min_df=5, ngram_range=(1,2))
     tfidf = vec.fit_transform(docs)
     names = vec.get_feature_names()
     return tfidf, names
 
+"""generates a k-means model for the input data"""
 def run_kmeans(vector=None, links=[], iters=500, clusters=8):
     km = KMeans(n_clusters=clusters, max_iters=iters)
     km.fit_transform(vec)
@@ -191,14 +206,14 @@ def run_kmeans(vector=None, links=[], iters=500, clusters=8):
         print x, clusters[x]
     return km.labels_
 
-
-
+"""generates a topic model for the input data"""
 def topic_model(counts, names,iters=500, topics = 6, rand_state=1 ):
     model = lda.LDA(n_iter=iters, n_topics=topics, random_state=rand_state)
     dist = model.fit_transform(counts)
     print_topics(model, names)
     return model, dist
 
+"""prints out the top 20 words of each topic"""
 def print_topics(model, names):
     topic_word = model.topic_word_
     n_top_words = 20 
@@ -206,7 +221,7 @@ def print_topics(model, names):
         topic_words = np.array(names)[np.argsort(topic_dist)][:-n_top_words:-1]
         print("Topic {}: {}".format(i," | ".join(topic_words)))
 
-
+"""Assigns a document its highest cluster given its distribution"""
 def assign_cluster(dist, links, n_clusters=6):
     clusters = [[] for i  in xrange(n_clusters)]
     rev_lookup = dict()
@@ -219,6 +234,7 @@ def assign_cluster(dist, links, n_clusters=6):
         percents.append(float(len(clusters[i]))/float(len(links)))
     return clusters, percents, rev_lookup
 
+"""plots a bargraph of the % given towards each topic"""
 def plot_bargraph(percents,width=.8):
     topics = xrange(len(percents))
     barlist = plt.bar(topics, percents, width=width)
@@ -226,8 +242,8 @@ def plot_bargraph(percents,width=.8):
     plt.xlabel('Topic number')
     plt.show()
 
+"""Generates a list of edges between documents along with their edge weights"""
 def find_matches(dist, links, thresh=3):
-    
     edges = []
     for i in xrange(len(links)):
         for j in xrange(i+1, len(links)):
@@ -238,6 +254,7 @@ def find_matches(dist, links, thresh=3):
                 edges.append((i,j,{'weight':weight}))
     return edges
 
+"""helper to compute distance of log of distributions"""
 def determine_edge(dist1,dist2):
     import math 
     diff = 0 
@@ -245,7 +262,7 @@ def determine_edge(dist1,dist2):
         diff += abs(math.log(x)-math.log(y))
     return diff 
 
-
+"""builds the graph with documents as nodes and distances as edges"""
 def build_graph(dist, links, lookup, thresh=3):
     import networkx as nx
     import colour as cl
@@ -258,15 +275,18 @@ def build_graph(dist, links, lookup, thresh=3):
     G.add_edges_from(edges)
     return G, color_map
 
+"""displays the given graph"""
 def show_graph(G):
     import networkx as nx
     color_map = {0:'red',1:'blue', 2:'green', 3:'yellow',4:'orange', 5:'purple'}
     nx.draw(G,node_color=[color_map[G.node[node]['cluster']] for node in G])
     plt.show()
 
+
+
+"""This was used for development, but now I made the interface at analyze.py, which 
+is a much nicer way to interact with these tools"""
 if  __name__ == "__main__":
-
-
     argc = len(sys.argv)
     if argc < 3:
         print "usage: python scrapegoogle.py <num_results> <search_query>"
